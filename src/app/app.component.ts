@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarritoService } from './Service/carrito.service';
 
 @Component({
   selector: 'app-root',

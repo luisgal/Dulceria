@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4> Agregar un nuevo producto</h4>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ID</label>
+                    <input type="number" class="form-control" id="id" name="id" placeholder="Enter id" [(ngModel)]="producto.id" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa la clave única del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa el nombre" [(ngModel)]="producto.nombre" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa el nombre del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Marca</label>
+                    <input type="text" class="form-control" id="marca" name="marca" placeholder="Ingresa el primer apellido" [(ngModel)]="producto.marca" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa la marca del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Sabor</label>
+                    <input type="text" class="form-control" id="sabor" name="sabor" placeholder="Ingresa el segundo apellido" [(ngModel)]="producto.sabor" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa el sabor del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Existencia</label>
+                    <input type="number" class="form-control" id="existencia" name="existencia" placeholder="Ingresa el existencia" [(ngModel)]="producto.existencia" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa la existencia del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Precio</label>
+                    <input type="number" class="form-control" id="precio" name="precio" placeholder="Ingresa el precio" [(ngModel)]="producto.precio" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa el precio del producto.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Caducidad</label>
+                    <input type="date" class="form-control" id="caducidad" name="caducidad" placeholder="Ingresa el caducidad" [(ngModel)]="producto.caducidad" [disabled]="true">
+                    <small class="form-text text-muted">Ingresa el caducidad del producto.</small>
+                </div>
+
+                <button type="submit" class="btn btn-danger" (click)="delete()">Eliminar</button>
+            </form>
+        </div>
+    </div>
+</div>

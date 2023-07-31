@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4>Lista de productos</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-success">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Sabor</th>
+                    <th scope="col">Existencia</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Caducidad</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Agregar</th>
+                    <th scope="col">En el carrito</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let producto of productos; let i = index;">
+                    <th scope="row">{{producto.id}}</th>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.marca}}</td>
+                    <td>{{producto.sabor}}</td>
+                    <td>{{producto.existencia}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.caducidad}}</td>
+                    <td><a class="btn btn-warning" (click)="updateProducto(i)" routerLink="/edit"><span class="material-icons">autorenew</span></a></td>
+                    <td><a class="btn btn-danger" (click)="updateProducto(i)" routerLink="/delete"><span class="material-icons">delete_outline</span></a></td>
+                    <td><a class="btn btn-success" (click)="addProducto(i)"><span class="material-icons">add</span></a></td>
+                    <td scope="row">{{getCantidadProducto(i)}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
